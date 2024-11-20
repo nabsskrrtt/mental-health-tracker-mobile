@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mental_health_tracker_mobile/screens/list_moodentry.dart';
 import 'package:mental_health_tracker_mobile/screens/moodentry_form.dart';
 
 class ItemHomepage {
@@ -38,6 +39,12 @@ class ItemCard extends StatelessWidget {
               MaterialPageRoute(
                       builder: (context) => const MoodEntryFormPage(),
                     ));
+          } else if (item.name == "Lihat Mood") {
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => const MoodEntryPage()
+                ),
+            );
           }
         },
         // Container untuk menyimpan Icon dan Text
